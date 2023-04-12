@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flag of Vietnam with Fireworks</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			background-color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#flag {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        top: 20px;
+        left: 20px;
+        background-image: url('https://thegioinghiduong.com/anh-dong-co-viet-nam/imager_1_16863_700.jpg');
+        background-size: cover;
+      }
+ 	.firework {
+			position: absolute;
+			background-color: transparent;
+			border: none;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			z-index: 1;
+			animation: firework 2s ease-in-out infinite;
+		}
+		.firework-1 {
+			left: 20%;
+			animation-delay: 0s;
+		}
+		.firework-2 {
+			left: 80%;
+			animation-delay: 1s;
+		}
+		@keyframes firework {
+			0% {
+				transform: translate(0, 0) scale(1);
+				background-color: #f5a623;
+			}
+			50% {
+				transform: translate(0, -100px) scale(0.5);
+				background-color: #7ed321;
+			}
+			100% {
+				transform: translate(0, -200px) scale(0);
+				background-color: transparent;
+			}
+		}
+	</style>
+</head>
+<head>
+	<title>My Video</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+
+		
+		video {
+			object-fit: contain;
+			width: 50%; /* Độ rộng video là 50% của khung hiển thị */
+			height: auto; /* Chiều cao video tự động tính toán */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+        }    
+	</style>
+</head>
+  
+<body>
+	<video src="Hưởng ứng Chủ Tịch Hồ Chí Minh.mp4" controls></video>
+	  <audio controls
+	  src="y2mate.com - Nhảy Flashmob Việt Sử Kiêu Hùng trình diễn bới tập thể 10A15 THPT Trưng Vương TPHCM.mp3" type="audio/mpeg"></audio>
+  </body>
+  <body>
+	  <img id="vietnam-flag" src="https://thegioinghiduong.com/anh-dong-co-viet-nam/imager_1_16863_700.jpg" width="150" height="100">
+	  <script>
+		  var flag = document.getElementById("vietnam-flag");
+		  flag.addEventListener("click", function() {
+			if (flag.style.display === "none") {
+			  flag.style.display = "block";
+			} else {
+			  flag.style.display = "none";
+			}
+		  });
+		</script>
+		<button class="firework firework-1"></button>
+	  <button class="firework firework-2"></button>
+	  <div id="info">
+		  <p style="color:#e1e1b8;"></p>
+	  </div>
+	  <canvas id="canvas">Canvas không hổ trợ trình duyệt của bạn.</canvas>
+	  <script type="text/javascript" src="script.js"></script>
+	  <div id="wrapper">
+		  <div id="video-container">
+			  <video id="video" width="100%" height="auto" controls>
+				<source src="Hưởng ứng Chủ Tịch Hồ Chí Minh.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			  </video>
+			  <img src="https://thegioinghiduong.com/anh-dong-co-viet-nam/imager_1_16863_700.jpg" alt="Vietnamese Flag" id="flag">
+			  <div id="audio-container">
+				<audio id="audio" controls>
+				  <source src="y2mate.com - Nhảy Flashmob Việt Sử Kiêu Hùng trình diễn bới tập thể 10A15 THPT Trưng Vương TPHCM.mp3" type="audio/mp3">
+				  Your browser does not support the audio tag.
+				</audio>
+			  </div>
+			</div>
+
+	<script>
+		const flag = document.getElementById('flag');
+        const video = document.getElementsByTagName('video')[0];
+        let flagVisible = false;
+
+		// Xử lý sự kiện click vào lá cờ
+		flag.addEventListener('click', () => {
+      if (flagVisible) {
+        flag.style.display = 'none'; // Lá cờ biến mất
+        flagVisible = false;
+      } else {
+        flag.style.display = 'block'; // Lá cờ hiện ra
+        flagVisible = true;
+      }
+    });
+
+	    // Cân chỉnh kích thước video cho phù hợp với màn hình
+		window.onresize = () => {
+			if (window.innerWidth / window.innerHeight > video.videoWidth / video.videoHeight) {
+				video.style.width = 'auto';
+				video.style.height = '100%';
+			} else {
+				video.style.width = '100%';
+				video.style.height = 'auto';
+			}
+		};
+
+</script>
+</body>
+</html>           
+
+
+
